@@ -1,0 +1,26 @@
+<!--
+  Generated template for the ListPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-navbar *navbar>
+    <button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+        {{"app.title" | translate}}
+    </ion-title>
+</ion-navbar>
+<ion-content padding class="blog-index">
+  <ion-list>
+    <ion-item *ngFor="#blog of blogs" (click)="openDetail(blog)">
+      <ion-thumbnail item-left>
+        <ion-icon name="person" class="avatar"></ion-icon>
+      </ion-thumbnail>
+      <h2>{{blog.title}}</h2>
+      <p>{{blog.summary}}</p>
+      <button clear item-right>View</button>
+    </ion-item>
+  </ion-list>
+</ion-content>

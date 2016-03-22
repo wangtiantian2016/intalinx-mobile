@@ -1,0 +1,21 @@
+<ion-menu [content]="content" class="menu">
+  <ion-content>
+    <ion-list no-lines>
+      <ion-card>
+        <ion-item>
+          <ion-avatar item-left>
+            <img src={{user.userAvatar}}>
+          </ion-avatar>
+          <span>{{user.userName}}</span>
+        </ion-item>
+        <ion-item><span>{{user.userAddress}}</span></ion-item>
+      </ion-card>
+      
+      <button ion-item *ngFor="#item of menus" (click)="openPage(item)">
+        <ion-icon name={{item.titleIcon}} item-left></ion-icon>{{item.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav id="nav" [root]="rootPage" #content swipe-back-enabled="false"></ion-nav>

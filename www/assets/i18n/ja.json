@@ -1,0 +1,19 @@
+{
+  "app" : {
+    "title" : "ブログ",
+    "action": {
+      "edit": "編集",
+      "delete": "削除"
+    },
+    "portal" : {
+        "title" : "ポータル"
+    },
+    "login" : {
+        "title" : "ログイン1",
+        "loginId" : "ログインID",
+        "password" : "パスワード",
+        "rememberMe" : "ログインしたままにする",
+        "login" : "ログイン"
+    }
+  }
+}
