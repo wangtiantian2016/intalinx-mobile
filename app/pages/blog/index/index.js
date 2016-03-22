@@ -2,6 +2,8 @@ import {Page, NavController} from 'ionic-angular';
 
 import {TranslatePipe} from 'ng2-translate/ng2-translate';
 
+import {BlogService} from '../../../providers/blog/blog-service/blog-service'; 
+
 import {DetailPage} from '../detail/detail';
 
 /*
@@ -12,30 +14,22 @@ import {DetailPage} from '../detail/detail';
 */
 @Page({
     templateUrl: 'build/pages/blog/index/index.html',
+    providers: [BlogService],
     pipes: [TranslatePipe]
 })
 export class BlogIndexPage {
     static get parameters() {
-        return [[NavController]];
+        return [[NavController], [BlogService]];
     }
 
-    constructor(nav) {
+    constructor(nav, blogService) {
         this.nav = nav;
+        this.blogService = blogService;
         
-        this.blogs = [
-            {
-                "id": "1",
-                "title": "test",
-                "summary": "test1"
-            },
-            {
-                "id": "2",
-                "title": "test",
-                "summary": "test1"
-            }
-        ]
+        this.blogService.load().then(data => {
+            this.blogs = data;
+        });
     }
-
 
     openDetail(blog) {
         this.nav.push(DetailPage, {
