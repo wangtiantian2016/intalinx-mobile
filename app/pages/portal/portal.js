@@ -33,7 +33,7 @@ export class PortalPage {
     
     this.components = {
         "portal": PortalPage,
-        "blogIndex" : BlogIndexPage
+        "blog" : BlogIndexPage
     }
     
     if (!this.app.showMenu) {

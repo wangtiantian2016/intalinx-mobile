@@ -7,7 +7,7 @@
     {
         "titleIcon": "chatbubbles",
         "title": "ブログ",
-        "componentsId": "blogIndex"
+        "componentsId": "blog"
     },
     {
         "titleIcon": "settings",
