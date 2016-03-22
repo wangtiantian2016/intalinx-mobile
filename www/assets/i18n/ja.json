@@ -9,7 +9,7 @@
         "title" : "ポータル"
     },
     "login" : {
-        "title" : "ログイン1",
+        "title" : "ログイン",
         "loginId" : "ログインID",
         "password" : "パスワード",
         "rememberMe" : "ログインしたままにする",
